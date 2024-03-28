@@ -1,0 +1,309 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background: black;
+    color: white;
+}
+.default-spacing{
+    padding: 10px 10%;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+
+span{
+    color:crimson;
+}
+.button{
+    background: transparent;
+    border: 1px solid crimson;
+    border-radius: 8px;
+    padding: 14px 20px;
+    display: inline-block;
+}
+/* Nav bar */
+
+.nav-bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    min-height: 10vh;
+    background-color: rgba(31,30,30,0.3);
+}
+nav ul{
+    display: flex;
+    list-style: none;
+}
+nav ul li{
+    margin-right: 15px;
+}
+
+.nav-bar a h1{
+    word-spacing: 10px;
+}
+
+.nav-bar nav ul li a{
+    font-size: 20px;
+    font-weight: 550;
+    position: relative;
+}
+
+.nav-bar nav ul li a:hover{
+    color: crimson;
+}
+
+.nav-bar nav ul li a::before{
+    content: '';
+    width: 0;
+    height: 3px;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    background: crimson;
+    transition: 0.3s;
+}
+
+.nav-bar nav ul li a:hover::before{
+    width: 100%;
+}
+
+/* Header */
+
+#header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(Icons/A.jpg);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+    position: relative;
+}
+#header h1{
+    font-size: 50px;
+}
+#header .button{
+    margin-top: 30px;
+    font-size: 25px;
+    font-family: 400;
+}
+.button:hover{
+    background-color: crimson;
+}
+#header::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: black;
+    opacity: 0.7;
+    z-index: -1;
+}
+
+/* About me */
+
+#about-me{
+    margin-top: 50px;
+}
+
+#about-me h1{
+    text-align: center;
+    margin-bottom: 30px;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-left{
+    flex-basis: 35%;
+}
+.about-left img{
+    width: 100%;
+    border-radius: 15px;
+}
+.about-right{
+    flex-basis: 60%;
+}
+.section-title{
+    font-size: 50px;
+    text-transform: uppercase;
+    font-weight: 600;
+    word-spacing: 18px;
+}
+
+/* Tab title */
+
+.tab-title{
+    display: flex;
+    margin: 30px 0;
+
+}
+.tab-link{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+
+}
+.tab-link::after{
+    content: '';
+    width: 50%;
+    height: 4px;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    background: crimson;
+}
+
+/* SERvice */
+#service{
+    margin-top: 50px;
+}
+
+.service-list{
+   
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    margin-top: 40px;
+    gap: 40px;
+}
+#service h1{
+    text-align: center;
+}
+
+.service-list div{
+    background-color: #262626;
+    padding: 40px;
+    font-size: 14px;
+    transition: 0.3s;
+    border-radius: 20px;
+}
+
+.service-list div i{
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.service-list div:hover{
+    background: crimson;
+    transform: translateY(-10px);
+}
+
+/*----MY WORK ------------*/
+
+.service-list .background-img{
+    height: 280px;
+    background-image: url(Icons/grapich.jpg);
+    background-color: rgb(144, 58, 75); 
+
+    background-size: cover;
+    color: black;
+}
+.service-list .background-img:hover{
+    background-image: linear-gradient(rgb(151, 45, 45), rgb(87, 87, 66));
+    transform: translateY(-10px);
+    opacity: 0.7;
+    color: rgb(245, 250, 245);
+}
+
+.service-list .background-img1{
+    height: 280px;
+    background-image: url(Icons/web.jpg);
+    background-color: rgb(144, 58, 75); 
+
+    background-size: cover;
+    color: black;
+}
+.service-list .background-img1:hover{
+    background-image: linear-gradient(rgb(151, 45, 45), rgb(87, 87, 66));
+    transform: translateY(-10px);
+    opacity: 0.7;
+    color: rgb(245, 250, 245);
+}
+.service-list .background-img2{
+    height: 280px;
+    background-image: url(Icons/appdesign.jpg);
+    background-color: rgb(144, 58, 75); 
+
+    background-size: cover;
+    color: black;
+}
+.service-list .background-img2:hover{
+    background-image: linear-gradient(rgb(151, 45, 45), rgb(87, 87, 66));
+    transform: translateY(-10px);
+    opacity: 0.7;
+    color: rgb(245, 250, 245);
+}
+#contact{
+    margin-top: 50px;
+}
+#contact h1{
+    margin-bottom: 30px;
+}
+#contact .contact-left p i{
+    color: crimson;
+    margin-right: 15px;
+}
+#contact .contact-left p{
+    font-size: 30px;
+}
+.contact-left{
+    flex-basis: 40%;
+}
+.social-icon{
+    margin:  30px 0;
+    font-size: 30px;
+}
+.social-icon a{
+    display: inline-block;
+    margin-right: 25px;
+    transition: 0.3s;
+}
+.social-icon a:hover{
+    color: crimson;
+    transform: translateY(-10px);
+}
+#contact .button{
+    margin: 0 auto;
+}
+.contact-right{
+    flex-basis: 50%;
+}
+.contact-right form{
+    width: 100%;
+}
+
+.contact-right input, .contact-right textarea{
+    width: 100%;
+    border: 0;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: white;
+    font-size: 18px;
+    resize: none;
+}
+.contact-right button{
+    background-color: rgb(63, 63, 67);
+    color: white;
+    margin-top: 30px;
+    font-size: 20px;
+    font-family: 200;
+    padding: 10px 15px;
+}
+.contact-right button:hover{
+    background-color: crimson;
+}
+
+#Nita-Hun.github.io
